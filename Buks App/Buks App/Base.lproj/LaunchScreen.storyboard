@@ -19,44 +19,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="illustration-drib-drib_2x" translatesAutoresizingMaskIntoConstraints="NO" id="bbr-JR-Fdk">
-                                <rect key="frame" x="55" y="113" width="304" height="224"/>
+                                <rect key="frame" x="-46" y="44" width="506" height="442"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="224" id="rRo-L6-Aup"/>
-                                    <constraint firstAttribute="width" constant="304" id="yZj-qd-5BJ"/>
+                                    <constraint firstAttribute="height" constant="442" id="6gP-7c-OB6"/>
+                                    <constraint firstAttribute="width" constant="506" id="yah-1l-CYr"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wellcome to Buks" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cz-hp-kNk">
-                                <rect key="frame" x="11.5" y="348" width="391.5" height="210"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="242" id="jXV-Cc-G15"/>
-                                    <constraint firstAttribute="height" constant="210" id="zKU-na-iG6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="KhmerSangamMN" family="Khmer Sangam MN" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I challenger you to read much books as you can and get money rent your books to other people" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifg-xp-L5h">
-                                <rect key="frame" x="25.5" y="566" width="363" height="45"/>
+                                <rect key="frame" x="36" y="514" width="343" height="117"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="363" id="smM-BZ-HpT"/>
-                                    <constraint firstAttribute="height" constant="45" id="tLI-Ri-RPT"/>
+                                    <constraint firstAttribute="width" constant="343" id="b21-gY-nAs"/>
+                                    <constraint firstAttribute="height" constant="117" id="njW-pY-qJH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="21"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.90514594316482544" green="0.92956298589706421" blue="0.92957335710525513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bbr-JR-Fdk" secondAttribute="trailing" constant="55" id="IRl-cC-trv"/>
-                            <constraint firstItem="bbr-JR-Fdk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="OMh-Mw-hwP"/>
-                            <constraint firstItem="ifg-xp-L5h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25.5" id="Rdp-oh-rHl"/>
-                            <constraint firstItem="ifg-xp-L5h" firstAttribute="top" secondItem="6cz-hp-kNk" secondAttribute="bottom" constant="8" symbolic="YES" id="Rtr-7X-v9C"/>
-                            <constraint firstItem="6cz-hp-kNk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Xwx-lA-Mqq"/>
-                            <constraint firstItem="ifg-xp-L5h" firstAttribute="centerX" secondItem="6cz-hp-kNk" secondAttribute="centerX" id="YkB-SI-ZKu"/>
-                            <constraint firstItem="bbr-JR-Fdk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="he4-nx-nL6"/>
-                            <constraint firstItem="6cz-hp-kNk" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="imv-0y-3gg"/>
-                            <constraint firstItem="bbr-JR-Fdk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="mYi-sC-QOa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ifg-xp-L5h" secondAttribute="trailing" constant="25.5" id="yiI-Wr-IMK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ifg-xp-L5h" secondAttribute="bottom" constant="231" id="9S6-xP-5n0"/>
+                            <constraint firstItem="bbr-JR-Fdk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9f5-Tn-bZj"/>
+                            <constraint firstItem="ifg-xp-L5h" firstAttribute="top" secondItem="bbr-JR-Fdk" secondAttribute="bottom" constant="28" id="JfH-s9-jja"/>
+                            <constraint firstItem="bbr-JR-Fdk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="46" id="Jh4-jc-vHH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ifg-xp-L5h" secondAttribute="trailing" constant="35" id="Lio-En-ikL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="bbr-JR-Fdk" secondAttribute="leading" constant="46" id="Mu6-tP-CEA"/>
+                            <constraint firstItem="ifg-xp-L5h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="l2P-AA-EMl"/>
+                            <constraint firstItem="bbr-JR-Fdk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="onp-Fj-pFx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
