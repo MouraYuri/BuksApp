@@ -15,9 +15,9 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
     // MARK - controllers declaration
     lazy var subViewControllers: [UIViewController] = {
         return[
-            UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController1") as! ViewController1,
-            UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController2") as! ViewController2,
-            UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController3") as! ViewController3
+            UIStoryboard(name: "Welcome", bundle: nil).instantiateViewController(withIdentifier: "ViewController1") as! ViewController1,
+            UIStoryboard(name: "Welcome", bundle: nil).instantiateViewController(withIdentifier: "ViewController2") as! ViewController2,
+            UIStoryboard(name: "Welcome", bundle: nil).instantiateViewController(withIdentifier: "ViewController3") as! ViewController3
             
         ]
     }()
@@ -76,9 +76,9 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
         pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 200,width: UIScreen.main.bounds.width,height: 50))
         self.pageControl.numberOfPages = subViewControllers.count
         self.pageControl.currentPage = 0
-        self.pageControl.tintColor = UIColor.white
-        self.pageControl.pageIndicatorTintColor = UIColor.init(red: 227/255, green: 243/255, blue: 251/255, alpha:1.0)
-        self.pageControl.currentPageIndicatorTintColor = UIColor.init(red: 162/255, green: 213/255, blue: 242/255, alpha:1.0);
+        self.pageControl.tintColor = UIColor.black
+        self.pageControl.pageIndicatorTintColor = #colorLiteral(red: 0.7254901961, green: 0.9215686275, blue: 1, alpha: 1)
+        self.pageControl.currentPageIndicatorTintColor = #colorLiteral(red: 0.5854760525, green: 0.8352941176, blue: 0.9490196078, alpha: 1)
         self.view.addSubview(pageControl)
     }
     

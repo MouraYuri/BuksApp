@@ -17,35 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="illustration-drib-drib_2x" translatesAutoresizingMaskIntoConstraints="NO" id="bbr-JR-Fdk">
-                                <rect key="frame" x="-46" y="44" width="506" height="442"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="442" id="6gP-7c-OB6"/>
-                                    <constraint firstAttribute="width" constant="506" id="yah-1l-CYr"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I challenger you to read much books as you can and get money rent your books to other people" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifg-xp-L5h">
-                                <rect key="frame" x="36" y="514" width="343" height="117"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="b21-gY-nAs"/>
-                                    <constraint firstAttribute="height" constant="117" id="njW-pY-qJH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="21"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" red="0.90514594316482544" green="0.92956298589706421" blue="0.92957335710525513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ifg-xp-L5h" secondAttribute="bottom" constant="231" id="9S6-xP-5n0"/>
-                            <constraint firstItem="bbr-JR-Fdk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9f5-Tn-bZj"/>
-                            <constraint firstItem="ifg-xp-L5h" firstAttribute="top" secondItem="bbr-JR-Fdk" secondAttribute="bottom" constant="28" id="JfH-s9-jja"/>
-                            <constraint firstItem="bbr-JR-Fdk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="46" id="Jh4-jc-vHH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ifg-xp-L5h" secondAttribute="trailing" constant="35" id="Lio-En-ikL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="bbr-JR-Fdk" secondAttribute="leading" constant="46" id="Mu6-tP-CEA"/>
-                            <constraint firstItem="ifg-xp-L5h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="l2P-AA-EMl"/>
-                            <constraint firstItem="bbr-JR-Fdk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="onp-Fj-pFx"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -54,8 +26,5 @@
             <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="illustration-drib-drib_2x" width="800" height="600"/>
-    </resources>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

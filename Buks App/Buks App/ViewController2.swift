@@ -11,12 +11,14 @@ import UIKit
 
 class ViewController2: UIViewController{
     override func viewDidLoad() {
-         super.viewDidLoad()
+        super.viewDidLoad()
     }
     
     @IBAction func Test(_ sender: UIButton) {
         let pageViewController = self.parent as! PageViewController
         pageViewController.nextPageWithIndex(index: 2)
+        pageViewController.pageControl.currentPage = 2
+        
     }
     
     

@@ -18,6 +18,7 @@ class ViewController1: UIViewController {
     @IBAction func Click(_ sender: Any) {
         let pageViewController = self.parent as! PageViewController
         pageViewController.nextPageWithIndex(index: 1)
+      
     }
     
     @IBOutlet weak var SkipButton: UIButton!
@@ -26,6 +27,7 @@ class ViewController1: UIViewController {
     @IBAction func NextButton(_ sender: Any) {
         let pageViewController = self.parent as! PageViewController
         pageViewController.nextPageWithIndex(index: 1)
+        pageViewController.pageControl.currentPage = 1
     }
     
 }
