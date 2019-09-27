@@ -31,6 +31,7 @@
 		577FEBD8233AAB6D00425E77 /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FEBD7233AAB6D00425E77 /* CaptureViewController.swift */; };
 		577FEBDA233AB5FE00425E77 /* ReviewsBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FEBD9233AB5FE00425E77 /* ReviewsBookTableViewCell.swift */; };
 		579CF440233BEA87009D131B /* ServiceUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579CF43F233BEA87009D131B /* ServiceUser.swift */; };
+		57B75AC6233C04F700F5B88A /* UserCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57B75AC4233C04F700F5B88A /* UserCD.xcdatamodeld */; };
 		57BBE912232C2262003FC13E /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BBE911232C2262003FC13E /* ViewController2.swift */; };
 		57BBE914232C2284003FC13E /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BBE913232C2284003FC13E /* ViewController3.swift */; };
 		57BBE916232C2415003FC13E /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BBE915232C2415003FC13E /* PageViewController.swift */; };
@@ -65,6 +66,7 @@
 		577FEBD7233AAB6D00425E77 /* CaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
 		577FEBD9233AB5FE00425E77 /* ReviewsBookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsBookTableViewCell.swift; sourceTree = "<group>"; };
 		579CF43F233BEA87009D131B /* ServiceUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceUser.swift; sourceTree = "<group>"; };
+		57B75AC5233C04F700F5B88A /* UserCD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserCD.xcdatamodel; sourceTree = "<group>"; };
 		57BBE911232C2262003FC13E /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		57BBE913232C2284003FC13E /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		57BBE915232C2415003FC13E /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		570661EE232AD98B00653D01 /* Buks App */ = {
 			isa = PBXGroup;
 			children = (
+				57B75AC3233C04D400F5B88A /* CoreDataModels */,
 				5707B44B23340F7D00EEA65E /* View */,
 				5707B4422333FA7900EEA65E /* Model */,
 				5727AD232332C9DC00C15AFA /* Storyboards */,
@@ -166,6 +169,14 @@
 				570661F3232AD98B00653D01 /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		57B75AC3233C04D400F5B88A /* CoreDataModels */ = {
+			isa = PBXGroup;
+			children = (
+				57B75AC4233C04F700F5B88A /* UserCD.xcdatamodeld */,
+			);
+			path = CoreDataModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +260,7 @@
 				575A9549233967DC00CAEC90 /* AddBookTableViewController.swift in Sources */,
 				57BBE914232C2284003FC13E /* ViewController3.swift in Sources */,
 				577FEBD8233AAB6D00425E77 /* CaptureViewController.swift in Sources */,
+				57B75AC6233C04F700F5B88A /* UserCD.xcdatamodeld in Sources */,
 				57CD60462331570500BF2FBB /* Constructor.swift in Sources */,
 				570661F2232AD98B00653D01 /* ViewController1.swift in Sources */,
 				5707B4442333FA8A00EEA65E /* User.swift in Sources */,
@@ -341,7 +353,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -396,7 +408,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -411,7 +423,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J5A9TSVLLY;
 				INFOPLIST_FILE = "Buks App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -428,7 +442,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J5A9TSVLLY;
 				INFOPLIST_FILE = "Buks App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -471,6 +487,16 @@
 			);
 			currentVersion = 570661F7232AD98B00653D01 /* Buks_App.xcdatamodel */;
 			path = Buks_App.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		57B75AC4233C04F700F5B88A /* UserCD.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				57B75AC5233C04F700F5B88A /* UserCD.xcdatamodel */,
+			);
+			currentVersion = 57B75AC5233C04F700F5B88A /* UserCD.xcdatamodel */;
+			path = UserCD.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

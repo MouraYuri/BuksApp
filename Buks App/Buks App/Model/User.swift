@@ -15,7 +15,7 @@ struct User: Decodable {
     let password: String
     let books: [Book]
 }
-struct UserComents: Decodable{
+struct UserComments: Decodable{
     let ID:String
     let Titulo:String
     let Nome:String

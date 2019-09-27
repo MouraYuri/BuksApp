@@ -12,72 +12,46 @@ import UIKit
 class NewBookViewController:UIViewController{
    
     
-    var buksArray = [BukResult]()
-    var books = [Book]()
+    @IBOutlet weak var tableView: UITableView!
+    var arrayBooks = [Book]()
     var filteredBook = [Book]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // retrievingData()
-        tableNewBooks.reloadData()
+        fetchBooks()
     }
 
     @IBOutlet weak var searchNewBook: UISearchBar!
     
     @IBOutlet weak var tableNewBooks: UITableView!
     
-    
-//    //books create
-//    func createBooks(books: Array<BukResult>) -> [Book] {
-//        var newArrayBook = [Book]()
-//
-//        newArrayBook = books.map({ book -> Book in
-//            let newBook = Book(titulo: book.title,
-//                               description: book.description ?? "No Description",
-//                               autor: book.author, id_dono: "01",
-//                               image: UIImage(named: "livro")!,
-//                               history_ID_rent: ["02"],
-//                               status: true,
-//                               estado: "novo")
-//            print(newBook)
-//            return newBook
-//        })
-//
-//        return newArrayBook
-// }
-//    // API CONSUME
-//    func retrievingData() {
-//
-//        //URLSession its like a browser tab and you
-//        //can do tasks, like downloading a JSON an api.
-//        // you can have more than one task
-//
-//        Service<Buk>().get(urlString: Route.best_sellers) { (buk, error) in //receiving the escaping closure
-//            if let err = error {
-//                print(err.localizedDescription)
-//            }
-//
-//             print(buk?.results)
-//
-//            guard let bukk = buk?.results else{
-//                return print("dasd")
-//            }
-//
-//            DispatchQueue.main.async {
-//                self.buksArray = bukk
-//                self.books = self.createBooks(books: self.buksArray)
-//
-//                self.filteredBook = self.books
-//
-//                self.tableNewBooks.reloadData()
-//            }
-//
-//        }
-//    }
+    func fetchBooks() {
+        
+        ServiceUser.getBooksAPI{ (books, error) in
+            if let err = error {
+                print(err)
+            }
+            
+            guard let result_books = books else {
+                return print("error carai")
+            }
+            
+            self.arrayBooks = result_books
+            self.filteredBook = self.arrayBooks
+            
+            print(self.arrayBooks)
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
 
 }
+
+
 
 extension NewBookViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -88,7 +62,7 @@ extension NewBookViewController:UITableViewDelegate,UITableViewDataSource{
         let notesTitles = filteredBook[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellNewBook", for: indexPath)
         
-    cell.textLabel?.text = "teste"
+    cell.textLabel?.text = notesTitles.title
         return cell
     }
     
@@ -99,9 +73,9 @@ extension NewBookViewController:UITableViewDelegate,UITableViewDataSource{
 extension NewBookViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        filteredBook = books.filter{
-//            $0.titulo.prefix(searchText.count) == searchText
-//        }
+        filteredBook = arrayBooks.filter{
+            $0.title.prefix(searchText.count) == searchText
+        }
         
         tableNewBooks.reloadData()
     }

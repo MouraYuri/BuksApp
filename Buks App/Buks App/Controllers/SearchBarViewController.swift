@@ -24,6 +24,7 @@ class SearchBarViewController: UIViewController {
         
 
     }
+    @IBOutlet weak var tableViewSearchBook: UITableView!
     
     @IBOutlet weak var BookName: UITextField!
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -59,3 +60,23 @@ class SearchBarViewController: UIViewController {
     }
 }
 
+extension SearchBarViewController: UITableViewDataSource,UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell  = tableView.dequeueReusableCell(withIdentifier: "searchBookCell")!
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+    
+    
+}

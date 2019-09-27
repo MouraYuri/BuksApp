@@ -41,6 +41,8 @@ class LoginViewController:UIViewController {
     @IBOutlet weak var passInput: UITextField!
     @IBAction func emailLogin(_ sender: UIButton) {
         verificaLogin(username: usernameInput.text, pass:passInput.text)
+        
+        //performSegue(withIdentifier: "login", sender: self)
     }
     
     @IBOutlet weak var createAccount: UIButton!
@@ -56,7 +58,11 @@ class LoginViewController:UIViewController {
                 print(err)
             }
             print(users)
-            self.usersArray = users!
+            
+            guard let resultsAPI = users else {
+                return print("\n DEU RUIM API!!!")
+            }
+            self.usersArray = resultsAPI
         }
         
     }
@@ -64,9 +70,9 @@ class LoginViewController:UIViewController {
     func verificaLogin(username:String?,pass:String?){
         usersArray.forEach { user in
             if((user.name == username) && (user.password == pass)){
-                print(user.books)
+                //persistir o user e a senha
                 performSegue(withIdentifier: "login", sender: self)
-                
+
             }
 //            }else{
 //                let alert = UIAlertController(title: "Erro", message: "Username or pass was wrong", preferredStyle: .alert)

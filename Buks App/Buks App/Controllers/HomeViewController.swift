@@ -9,18 +9,27 @@
 import Foundation
 import UIKit
 
+
 class HomeViewController:UIViewController,UITableViewDataSource,UITableViewDelegate {
-   
+    
+    
     var searchController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchBarViewController") as! SearchBarViewController
+    
+    var arrayBooks = [[Book]]()
     
     @IBOutlet weak var tableView: UITableView!
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+         fetchBooks()
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
-    
-       // books = createBooks(books: buksArray)
         
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+       
         
     }
     
@@ -94,6 +103,21 @@ class HomeViewController:UIViewController,UITableViewDataSource,UITableViewDeleg
         }
     }
     
+    func createDirectioryFileManager() {
+        //create directory
+        let documentsPath = NSURL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
+        let logsPath = documentsPath.appendingPathComponent("books")
+        print(logsPath!)
+        
+        do{
+            try FileManager.default.createDirectory(atPath: logsPath!.path, withIntermediateDirectories: true, attributes: nil)
+            
+        }catch let error as NSError{
+            print("Unable to create directory",error)
+        }
+    }
+    
+    
     
     // table view delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -104,7 +128,12 @@ class HomeViewController:UIViewController,UITableViewDataSource,UITableViewDeleg
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell") as! MainTableViewCell
-
+        
+        cell.cellDelegate = self
+        
+        if !arrayBooks.isEmpty {
+            cell.arrayBooks = arrayBooks[indexPath.section]
+        }
         tableView.separatorStyle = .none
         tableView.showsHorizontalScrollIndicator = false
         tableView.showsVerticalScrollIndicator = false
@@ -112,28 +141,83 @@ class HomeViewController:UIViewController,UITableViewDataSource,UITableViewDeleg
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueCellCollectionView" {
+            let controller = segue.destination as! BookViewController
+            controller.book = sender as? Book
+        }
+    }
+    
+    
+    func fetchBooks() {
+        
+        ServiceUser.getBooks{ (books, error) in
+            if let err = error {
+                print(err)
+            }
+            
+            guard let result_books = books else {
+                return print("error carai")
+            }
+            
+            self.arrayBooks = []
+            
+            for _ in 0...8 {
+                self.arrayBooks.append(result_books)
+            }
+            
+            print(self.arrayBooks)
+            DispatchQueue.main.async {
+                    self.tableView.reloadData()
+            }
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
     
    
     
 }
-
-extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       // let bookChoice = books[indexPath.row]
-        ///print(bookChoice)
-    }
-    //collection view delegate
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InsideCollectionViewCell", for: indexPath) as! InsideCollectionViewCell
-        collectionView.showsHorizontalScrollIndicator = false
-        return cell
-    }
-
-}
+//
+//extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+//
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//       // let bookChoice = books[indexPath.row]
+//        ///print(bookChoice)
+//    }
+//    //collection view delegate
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return 10
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InsideCollectionViewCell", for: indexPath) as! InsideCollectionViewCell
+//        guard let image_book = arrayBooks[indexPath.row].thumbnail else {
+//            return cell
+//        }
+//
+//        print("\n\n\n"+image_book)
+//        let url = URL(string: image_book)
+//        ServiceUser.shared.getData(from: url!) { (data, urlResponse, error) in
+//            guard let image = UIImage(data: data!) else {
+//                return print("Cant load data")
+//            }
+//
+//            DispatchQueue.main.async {
+//                cell.imageCell.image = image
+//            }
+//
+//        }
+//
+//
+//        collectionView.showsHorizontalScrollIndicator = false
+//        return cell
+//    }
+//
+//}
 
 
 extension HomeViewController: UISearchBarDelegate {
@@ -144,3 +228,12 @@ extension HomeViewController: UISearchBarDelegate {
         return false
     }
 }
+
+extension HomeViewController: MainTableViewCellDelegate {
+    func didSelectBook(_ book: Book) {
+        performSegue(withIdentifier: "segueCellCollectionView", sender: book)
+    }
+}
+
+
+

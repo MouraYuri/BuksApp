@@ -14,7 +14,7 @@ struct Book: Decodable {
     let description:String
     let author:String
     let owner_id:Int
-    let thumbnail:String
+    let thumbnail:String?
     let history_id:[String]
     let status:String
 }
