@@ -40,9 +40,9 @@ class LoginViewController:UIViewController {
     @IBOutlet weak var usernameInput: UITextField!
     @IBOutlet weak var passInput: UITextField!
     @IBAction func emailLogin(_ sender: UIButton) {
-        verificaLogin(username: usernameInput.text, pass:passInput.text)
+        //verificaLogin(username: usernameInput.text, pass:passInput.text)
         
-        //performSegue(withIdentifier: "login", sender: self)
+        performSegue(withIdentifier: "login", sender: self)
     }
     
     @IBOutlet weak var createAccount: UIButton!
@@ -57,28 +57,24 @@ class LoginViewController:UIViewController {
             if let err = error {
                 print(err)
             }
-            print(users)
             
             guard let resultsAPI = users else {
-                return print("\n DEU RUIM API!!!")
+                return print("\n usuarios nao poderam ser carregados")
             }
             self.usersArray = resultsAPI
         }
         
     }
     
-    func verificaLogin(username:String?,pass:String?){
+    func verificaLogin(username: String?, pass: String?){
         usersArray.forEach { user in
-            if((user.name == username) && (user.password == pass)){
-                //persistir o user e a senha
+            if user.name == username && user.password == pass {
                 performSegue(withIdentifier: "login", sender: self)
-
+            } else {
+                let alert = UIAlertController(title: "Erro", message: "Username or pass was wrong", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil ))
+                self.present(alert,animated: true)
             }
-//            }else{
-//                let alert = UIAlertController(title: "Erro", message: "Username or pass was wrong", preferredStyle: .alert)
-//                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil ))
-//                self.present(alert,animated: true)
-//            }
         }
     }
 }

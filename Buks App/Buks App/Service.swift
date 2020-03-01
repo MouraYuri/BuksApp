@@ -25,7 +25,7 @@ class Service<T: Decodable> {
                 let result = try JSONDecoder().decode(T.self, from: data)
                 completion(result, nil) //send the result with completion because there is no error
             } catch {
-                print("NAO CONSEGUIR DECODAR")
+                print("decodeble error")
                 completion(nil, error) //send the error because something went wrong when the service tried to get
             }
             

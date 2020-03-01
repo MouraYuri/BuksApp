@@ -68,7 +68,7 @@ extension MainTableViewCell: UICollectionViewDataSource, UICollectionViewDelegat
             return cell
         }
         
-        print("\n\n\n"+image_book)
+        
         let url = URL(string: image_book)
         ServiceUser.shared.getData(from: url!) { (data, urlResponse, error) in
             guard let data = data, let image = UIImage(data: data) else {

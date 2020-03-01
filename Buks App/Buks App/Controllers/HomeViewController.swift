@@ -13,9 +13,18 @@ import UIKit
 class HomeViewController:UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     
-    var searchController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchBarViewController") as! SearchBarViewController
+    var searchController = UIStoryboard(name: "Main", bundle: nil)
+        .instantiateViewController(withIdentifier: "SearchBarViewController") as! SearchBarViewController
     
     var arrayBooks = [[Book]]()
+    
+    var data = [TableSection: [String: Any]]()
+    
+    enum TableSection: Int {
+        case adventure = 0, romantic,
+        scifi, action, horror, family,
+        kids, animation, criminal, more
+    }
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -50,56 +59,56 @@ class HomeViewController:UIViewController,UITableViewDataSource,UITableViewDeleg
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = PaddingLabel()
         switch section {
-        case 0:
-            label.text = "Adventure"
-            label.backgroundColor = .white
-            label.textColor =  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-            
-            return label
-        case 1:
-            label.text = "Romantic"
-            label.backgroundColor = .white
-            label.textColor =  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-            return label
-        case 2:
-            label.text = "Sci-fi"
-            label.backgroundColor = .white
-            label.textColor =  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-            return label
-        case 3:
-            label.text = "Action"
-            label.backgroundColor = .white
-            label.textColor =  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-            return label
-        case 4:
-            label.text = "Horror"
-            label.backgroundColor = .white
-            label.textColor =  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-            return label
-        case 5:
-            label.text = "Family"
-            label.backgroundColor = .white
-            label.textColor =  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-            return label
-        case 6:
-            label.text = "Kids"
-            label.backgroundColor = .white
-            label.textColor =  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-            return label
-        case 7:
-            label.text = "Animation"
-            label.backgroundColor = .white
-            label.textColor =  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-            return label
-        case 8:
-            label.text = "Criminal"
-            label.backgroundColor = .white
-            label.textColor =  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-            return label
-        default:
-            label.text = "More"
-            return label
-            
+            case 0:
+                label.text = "Adventure"
+                label.backgroundColor = .white
+                label.textColor =  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+                
+                return label
+            case 1:
+                label.text = "Romantic"
+                label.backgroundColor = .white
+                label.textColor =  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+                return label
+            case 2:
+                label.text = "Sci-fi"
+                label.backgroundColor = .white
+                label.textColor =  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+                return label
+            case 3:
+                label.text = "Action"
+                label.backgroundColor = .white
+                label.textColor =  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+                return label
+            case 4:
+                label.text = "Horror"
+                label.backgroundColor = .white
+                label.textColor =  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+                return label
+            case 5:
+                label.text = "Family"
+                label.backgroundColor = .white
+                label.textColor =  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+                return label
+            case 6:
+                label.text = "Kids"
+                label.backgroundColor = .white
+                label.textColor =  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+                return label
+            case 7:
+                label.text = "Animation"
+                label.backgroundColor = .white
+                label.textColor =  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+                return label
+            case 8:
+                label.text = "Criminal"
+                label.backgroundColor = .white
+                label.textColor =  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+                return label
+            default:
+                label.text = "More"
+                return label
+                
         }
     }
     
@@ -157,7 +166,7 @@ class HomeViewController:UIViewController,UITableViewDataSource,UITableViewDeleg
             }
             
             guard let result_books = books else {
-                return print("error carai")
+                return print("error fetchBooks()")
             }
             
             self.arrayBooks = []

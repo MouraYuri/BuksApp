@@ -19,7 +19,6 @@ class NewBookViewController:UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         fetchBooks()
     }
 
@@ -35,7 +34,7 @@ class NewBookViewController:UIViewController{
             }
             
             guard let result_books = books else {
-                return print("error carai")
+                return print("error fetchBooks")
             }
             
             self.arrayBooks = result_books
