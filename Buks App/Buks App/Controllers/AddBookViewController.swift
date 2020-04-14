@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddBookTableViewController: UIViewController {
+class AddBookViewController: UIViewController {
 
     @IBAction func goAddButton(_ sender: Any) {
         performSegue(withIdentifier: "segueAddBook", sender: self)
@@ -20,7 +20,7 @@ class AddBookTableViewController: UIViewController {
 }
 
 
-extension AddBookTableViewController: UITableViewDelegate, UITableViewDataSource {
+extension AddBookViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2

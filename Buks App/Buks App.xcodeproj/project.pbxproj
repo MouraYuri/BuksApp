@@ -24,7 +24,7 @@
 		5727AD272332CA7700C15AFA /* InsideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727AD262332CA7700C15AFA /* InsideCollectionViewCell.swift */; };
 		5727AD292332CAA200C15AFA /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727AD282332CAA200C15AFA /* PaddingLabel.swift */; };
 		575A954723395D6600CAEC90 /* NewBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575A954623395D6600CAEC90 /* NewBookViewController.swift */; };
-		575A9549233967DC00CAEC90 /* AddBookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575A9548233967DC00CAEC90 /* AddBookTableViewController.swift */; };
+		575A9549233967DC00CAEC90 /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575A9548233967DC00CAEC90 /* AddBookViewController.swift */; };
 		576B00D12330161700638847 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576B00D02330161700638847 /* LoginViewController.swift */; };
 		576B338C2335492100ECD0F4 /* SearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576B338B2335492100ECD0F4 /* SearchBarViewController.swift */; };
 		577FEBD6233A8B5F00425E77 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FEBD5233A8B5F00425E77 /* UserViewController.swift */; };
@@ -59,7 +59,7 @@
 		5727AD262332CA7700C15AFA /* InsideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideCollectionViewCell.swift; sourceTree = "<group>"; };
 		5727AD282332CAA200C15AFA /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		575A954623395D6600CAEC90 /* NewBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookViewController.swift; sourceTree = "<group>"; };
-		575A9548233967DC00CAEC90 /* AddBookTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookTableViewController.swift; sourceTree = "<group>"; };
+		575A9548233967DC00CAEC90 /* AddBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
 		576B00D02330161700638847 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		576B338B2335492100ECD0F4 /* SearchBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewController.swift; sourceTree = "<group>"; };
 		577FEBD5233A8B5F00425E77 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 				570661F1232AD98B00653D01 /* ViewController1.swift */,
 				57EF83EB23393850007DFFB1 /* BookViewController.swift */,
 				575A954623395D6600CAEC90 /* NewBookViewController.swift */,
-				575A9548233967DC00CAEC90 /* AddBookTableViewController.swift */,
+				575A9548233967DC00CAEC90 /* AddBookViewController.swift */,
 				577FEBD5233A8B5F00425E77 /* UserViewController.swift */,
 				577FEBD7233AAB6D00425E77 /* CaptureViewController.swift */,
 			);
@@ -257,7 +257,7 @@
 				577FEBD6233A8B5F00425E77 /* UserViewController.swift in Sources */,
 				577FEBDA233AB5FE00425E77 /* ReviewsBookTableViewCell.swift in Sources */,
 				576B00D12330161700638847 /* LoginViewController.swift in Sources */,
-				575A9549233967DC00CAEC90 /* AddBookTableViewController.swift in Sources */,
+				575A9549233967DC00CAEC90 /* AddBookViewController.swift in Sources */,
 				57BBE914232C2284003FC13E /* ViewController3.swift in Sources */,
 				577FEBD8233AAB6D00425E77 /* CaptureViewController.swift in Sources */,
 				57B75AC6233C04F700F5B88A /* UserCD.xcdatamodeld in Sources */,

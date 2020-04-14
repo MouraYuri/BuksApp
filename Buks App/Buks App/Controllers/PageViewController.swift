@@ -18,7 +18,6 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
             UIStoryboard(name: "Welcome", bundle: nil).instantiateViewController(withIdentifier: "ViewController1") as! ViewController1,
             UIStoryboard(name: "Welcome", bundle: nil).instantiateViewController(withIdentifier: "ViewController2") as! ViewController2,
             UIStoryboard(name: "Welcome", bundle: nil).instantiateViewController(withIdentifier: "ViewController3") as! ViewController3
-            
         ]
     }()
     // MARK - Setup Page view control
