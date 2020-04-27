@@ -72,7 +72,7 @@ extension NewBookViewController:UITableViewDelegate,UITableViewDataSource{
 extension NewBookViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredBook = arrayBooks.filter{
+        filteredBook = arrayBooks.filter {
             $0.title.prefix(searchText.count) == searchText
         }
         

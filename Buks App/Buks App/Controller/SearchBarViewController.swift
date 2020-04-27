@@ -51,24 +51,28 @@ extension SearchBarViewController: UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let book = arrayBooks[indexPath.row]
-        let cell  = tableView.dequeueReusableCell(withIdentifier: "searchBookCell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "searchBookCell") as!
+        SearchTableViewCell
         
         guard let image_book = book.thumbnail else {
             return cell
         }
-        print("\n\n\n"+image_book)
+        
         let url = URL(string: image_book)
         
         guard let myUrl = url else {
             return cell
         }
+        
         ServiceUser.shared.getData(from: myUrl) { (data, urlResponse, error) in
             guard let data = data, let image = UIImage(data: data) else {
                 return print("Cant load data")
             }
             
             DispatchQueue.main.async {
-                cell.imageView?.image = image
+                cell.imageCell?.image = image
+                cell.textAuthorOfBook?.text = book.author
+                cell.textTitleOfBook?.text = book.title
                 cell.layoutSubviews()
             }
        

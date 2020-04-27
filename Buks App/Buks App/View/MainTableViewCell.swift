@@ -15,10 +15,7 @@ protocol MainTableViewCellDelegate: class {
 class MainTableViewCell: UITableViewCell {
     
     
-    weak var cellDelegate: MainTableViewCellDelegate?
-    
-    var parentController: UIViewController?
-    
+    weak var delegate: MainTableViewCellDelegate?
     @IBOutlet weak var clCollectionView: UICollectionView!
     
     var arrayBooks: [Book] = [] {
@@ -33,12 +30,6 @@ class MainTableViewCell: UITableViewCell {
         clCollectionView.dataSource = self
     }
     
-
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
-    }
     override func layoutSubviews() {
         self.layer.shadowOpacity = 0.7
         self.layer.shadowOffset = CGSize(width: 3, height: 3)
@@ -52,8 +43,7 @@ extension MainTableViewCell: UICollectionViewDataSource, UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let book = arrayBooks[indexPath.row]
-//        delegate?.senderBook(book: book)
-        cellDelegate?.didSelectBook(book)
+        delegate?.didSelectBook(book)
     }
     
     //collection view delegate
@@ -82,21 +72,8 @@ extension MainTableViewCell: UICollectionViewDataSource, UICollectionViewDelegat
             
         }
         
-        
         collectionView.showsHorizontalScrollIndicator = false
         return cell
     }
     
 }
-
-
-//extension MainTableViewCell {
-//    func setCollectionViewDataSourceDelegate <D:UICollectionViewDelegate & UICollectionViewDataSource>(_ dataSourceDelegate: D, forRow row:Int){
-//        
-//        clCollectionView.delegate = dataSourceDelegate
-//        clCollectionView.dataSource = dataSourceDelegate
-//        
-//        clCollectionView.reloadData()
-//    }
-//}
-

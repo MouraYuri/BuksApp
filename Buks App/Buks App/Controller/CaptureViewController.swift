@@ -1,6 +1,6 @@
 //
 //  CaptureViewController.swift
-//  PageViewController2
+//  CaptureViewController
 //
 //  Created by aluno on 23/09/19.
 //  Copyright © 2019 aluno. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class CaptureViewController: UIViewController , AVCaptureMetadataOutputObjectsDelegate {
+class CaptureViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!

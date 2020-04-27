@@ -209,10 +209,10 @@
             </objects>
             <point key="canvasLocation" x="1372" y="-78.710644677661179"/>
         </scene>
-        <!--Main-->
+        <!--TabBar-->
         <scene sceneID="M4n-av-Fqd">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="4M9-Nn-dj1" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="TabBar" id="4M9-Nn-dj1" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="WTf-eV-ZFP"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mys-7M-E8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -307,7 +307,7 @@
     </scenes>
     <resources>
         <image name="Grupo 614" width="299" height="320.33334350585938"/>
-        <image name="Grupo 617" width="448.5" height="480.5"/>
+        <image name="Grupo 617" width="299" height="320.33334350585938"/>
         <image name="Grupo 618" width="299" height="320.33334350585938"/>
     </resources>
     <inferredMetricsTieBreakers>

@@ -20,7 +20,7 @@ struct Constructor {
     init() {
         if userDefaults.value(forKey: "IS_FIRST_TIME") as? Bool != nil {
             print("not first usage")
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
             window = UIWindow(frame: UIScreen.main.bounds)
             let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
             window?.rootViewController = vc

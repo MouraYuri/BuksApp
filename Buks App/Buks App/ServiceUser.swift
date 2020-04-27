@@ -19,7 +19,7 @@ class ServiceUser {
     
     
     static func getUsers(completion: @escaping ([User]?, Error?) -> Void) {
-        let urlString = "http://localhost:3001/users"
+        let urlString = "https://vinicius-mesquita.herokuapp.com/users"
         
         guard let url = URL(string: urlString) else {return}
         
@@ -45,7 +45,7 @@ class ServiceUser {
     
     
     static func getBooks(completion: @escaping ([Book]?, Error?) -> Void) {
-        let urlString = "http://localhost:3001/books/"
+        let urlString = "https://vinicius-mesquita.herokuapp.com/books/"
         
         guard let url = URL(string: urlString) else {return}
         
@@ -70,7 +70,7 @@ class ServiceUser {
     }
     
     static func getBooksAPI(completion: @escaping ([Book]?, Error?) -> Void) {
-        let urlString = "http://localhost:3001/booksAPI/"
+        let urlString = "https://vinicius-mesquita.herokuapp.com/booksAPI/"
         
         guard let url = URL(string: urlString) else {return}
         

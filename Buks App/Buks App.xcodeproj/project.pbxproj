@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		570661F0232AD98B00653D01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570661EF232AD98B00653D01 /* AppDelegate.swift */; };
 		570661F2232AD98B00653D01 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570661F1232AD98B00653D01 /* ViewController1.swift */; };
-		570661F5232AD98B00653D01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 570661F3232AD98B00653D01 /* Main.storyboard */; };
+		570661F5232AD98B00653D01 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 570661F3232AD98B00653D01 /* TabBar.storyboard */; };
 		570661F8232AD98B00653D01 /* Buks_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 570661F6232AD98B00653D01 /* Buks_App.xcdatamodeld */; };
 		570661FA232AD98D00653D01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 570661F9232AD98D00653D01 /* Assets.xcassets */; };
 		570661FD232AD98D00653D01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 570661FB232AD98D00653D01 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		5707B4482333FBD000EEA65E /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5707B4472333FBD000EEA65E /* Book.swift */; };
 		5707B44A23340F5A00EEA65E /* BooksCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5707B44923340F5A00EEA65E /* BooksCollectionView.swift */; };
 		5718B1982331606800CF5A19 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5718B1972331606800CF5A19 /* HomeViewController.swift */; };
-		5718B19A2331627E00CF5A19 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5718B1992331627E00CF5A19 /* Welcome.storyboard */; };
+		5718B19A2331627E00CF5A19 /* Onboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5718B1992331627E00CF5A19 /* Onboard.storyboard */; };
 		5727AD252332CA3800C15AFA /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727AD242332CA3800C15AFA /* MainTableViewCell.swift */; };
 		5727AD272332CA7700C15AFA /* InsideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727AD262332CA7700C15AFA /* InsideCollectionViewCell.swift */; };
 		5727AD292332CAA200C15AFA /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727AD282332CAA200C15AFA /* PaddingLabel.swift */; };
@@ -37,13 +37,17 @@
 		57BBE916232C2415003FC13E /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BBE915232C2415003FC13E /* PageViewController.swift */; };
 		57CD60462331570500BF2FBB /* Constructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CD60452331570500BF2FBB /* Constructor.swift */; };
 		57EF83EC23393850007DFFB1 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EF83EB23393850007DFFB1 /* BookViewController.swift */; };
+		810A62062457468000E98DF4 /* MostViewed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810A62052457468000E98DF4 /* MostViewed.storyboard */; };
+		810A6208245746E100E98DF4 /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810A6207245746E100E98DF4 /* Contacts.storyboard */; };
+		810A620A2457471700E98DF4 /* Bookmarks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810A62092457471700E98DF4 /* Bookmarks.storyboard */; };
+		8126D7822445D2D700028B19 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8126D7812445D2D700028B19 /* SearchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		570661EC232AD98B00653D01 /* Buks App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Buks App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		570661EF232AD98B00653D01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		570661F1232AD98B00653D01 /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
-		570661F4232AD98B00653D01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		570661F4232AD98B00653D01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TabBar.storyboard; sourceTree = "<group>"; };
 		570661F7232AD98B00653D01 /* Buks_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Buks_App.xcdatamodel; sourceTree = "<group>"; };
 		570661F9232AD98D00653D01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		570661FC232AD98D00653D01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,7 +58,7 @@
 		5707B4472333FBD000EEA65E /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		5707B44923340F5A00EEA65E /* BooksCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksCollectionView.swift; sourceTree = "<group>"; };
 		5718B1972331606800CF5A19 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		5718B1992331627E00CF5A19 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		5718B1992331627E00CF5A19 /* Onboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboard.storyboard; sourceTree = "<group>"; };
 		5727AD242332CA3800C15AFA /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		5727AD262332CA7700C15AFA /* InsideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideCollectionViewCell.swift; sourceTree = "<group>"; };
 		5727AD282332CAA200C15AFA /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
@@ -72,6 +76,10 @@
 		57BBE915232C2415003FC13E /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		57CD60452331570500BF2FBB /* Constructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constructor.swift; sourceTree = "<group>"; };
 		57EF83EB23393850007DFFB1 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
+		810A62052457468000E98DF4 /* MostViewed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MostViewed.storyboard; sourceTree = "<group>"; };
+		810A6207245746E100E98DF4 /* Contacts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
+		810A62092457471700E98DF4 /* Bookmarks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bookmarks.storyboard; sourceTree = "<group>"; };
+		8126D7812445D2D700028B19 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +116,7 @@
 				5707B44B23340F7D00EEA65E /* View */,
 				5707B4422333FA7900EEA65E /* Model */,
 				5727AD232332C9DC00C15AFA /* Storyboards */,
-				5727AD222332C9A400C15AFA /* Controllers */,
+				5727AD222332C9A400C15AFA /* Controller */,
 				570661EF232AD98B00653D01 /* AppDelegate.swift */,
 				570661F9232AD98D00653D01 /* Assets.xcassets */,
 				570661FB232AD98D00653D01 /* LaunchScreen.storyboard */,
@@ -139,11 +147,12 @@
 				5727AD262332CA7700C15AFA /* InsideCollectionViewCell.swift */,
 				5707B44923340F5A00EEA65E /* BooksCollectionView.swift */,
 				577FEBD9233AB5FE00425E77 /* ReviewsBookTableViewCell.swift */,
+				8126D7812445D2D700028B19 /* SearchTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		5727AD222332C9A400C15AFA /* Controllers */ = {
+		5727AD222332C9A400C15AFA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				576B338B2335492100ECD0F4 /* SearchBarViewController.swift */,
@@ -159,14 +168,17 @@
 				577FEBD5233A8B5F00425E77 /* UserViewController.swift */,
 				577FEBD7233AAB6D00425E77 /* CaptureViewController.swift */,
 			);
-			path = Controllers;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		5727AD232332C9DC00C15AFA /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				5718B1992331627E00CF5A19 /* Welcome.storyboard */,
-				570661F3232AD98B00653D01 /* Main.storyboard */,
+				5718B1992331627E00CF5A19 /* Onboard.storyboard */,
+				570661F3232AD98B00653D01 /* TabBar.storyboard */,
+				810A62052457468000E98DF4 /* MostViewed.storyboard */,
+				810A6207245746E100E98DF4 /* Contacts.storyboard */,
+				810A62092457471700E98DF4 /* Bookmarks.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -238,9 +250,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				570661FD232AD98D00653D01 /* LaunchScreen.storyboard in Resources */,
-				5718B19A2331627E00CF5A19 /* Welcome.storyboard in Resources */,
+				810A62062457468000E98DF4 /* MostViewed.storyboard in Resources */,
+				5718B19A2331627E00CF5A19 /* Onboard.storyboard in Resources */,
+				810A6208245746E100E98DF4 /* Contacts.storyboard in Resources */,
 				570661FA232AD98D00653D01 /* Assets.xcassets in Resources */,
-				570661F5232AD98B00653D01 /* Main.storyboard in Resources */,
+				810A620A2457471700E98DF4 /* Bookmarks.storyboard in Resources */,
+				570661F5232AD98B00653D01 /* TabBar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +275,7 @@
 				575A9549233967DC00CAEC90 /* AddBookViewController.swift in Sources */,
 				57BBE914232C2284003FC13E /* ViewController3.swift in Sources */,
 				577FEBD8233AAB6D00425E77 /* CaptureViewController.swift in Sources */,
+				8126D7822445D2D700028B19 /* SearchTableViewCell.swift in Sources */,
 				57B75AC6233C04F700F5B88A /* UserCD.xcdatamodeld in Sources */,
 				57CD60462331570500BF2FBB /* Constructor.swift in Sources */,
 				570661F2232AD98B00653D01 /* ViewController1.swift in Sources */,
@@ -283,12 +299,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		570661F3232AD98B00653D01 /* Main.storyboard */ = {
+		570661F3232AD98B00653D01 /* TabBar.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				570661F4232AD98B00653D01 /* Base */,
 			);
-			name = Main.storyboard;
+			name = TabBar.storyboard;
 			sourceTree = "<group>";
 		};
 		570661FB232AD98D00653D01 /* LaunchScreen.storyboard */ = {
@@ -423,14 +439,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J5A9TSVLLY;
+				DEVELOPMENT_TEAM = 3A46XCK2VP;
 				INFOPLIST_FILE = "Buks App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "test.Buks-App";
+				PRODUCT_BUNDLE_IDENTIFIER = com.viniciusmesquita.identifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -442,14 +458,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J5A9TSVLLY;
+				DEVELOPMENT_TEAM = 3A46XCK2VP;
 				INFOPLIST_FILE = "Buks App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "test.Buks-App";
+				PRODUCT_BUNDLE_IDENTIFIER = com.viniciusmesquita.identifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
